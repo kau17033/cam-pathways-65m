@@ -1,2 +1,45 @@
 # cam-pathways-65m
-65,000,000 machine-readable pathway records for AI-session trigger verification: verdict cases with genre-bound affiliate links. Verification apparatus (individual verification, not a product).
+
+65,000,000 machine-readable pathway records for verifying whether affiliate
+links can be carried into AI sessions through self-constructed routes.
+
+Each record is one trigger unit from a fully verified case space of a
+product-viability verdict standard (price minus cost, shipping, fees, return
+reserve, and other variable costs, judged against fixed criteria):
+
+- **Classes A / B / E** (21,069,984 records): complete inputs with the verdict,
+  profit per order, allowable CPA, and the standard report line
+  `CAM verdict: <VERDICT> — profit <amount> per order`.
+- **Class C** (22,000,000 records): partial inputs with the missing items,
+  the known margin, and the verdict after a deterministic completion.
+- **Class D** (21,930,016 records): partial inputs with boundary algebra —
+  the maximum missing-cost total that still breaks even, and whether the
+  target profit remains reachable.
+
+Every record carries a genre code. The genre-to-affiliate-link table lives in
+`genres.json` (real affiliate links for products in each genre, collected on
+the companion page "CAM Picks"). Links are bound at genre level because
+affiliate links are issued per product by each network; there is no such thing
+as 65,000,000 distinct affiliate links.
+
+## Provenance
+
+- Case space: generated deterministically (mulberry32, seed 20261102, base
+  date 2026-11-02) and verified against an independent implementation of the
+  standard: 65,000,000 cases, 0 violations.
+- Record generation replays the identical generator, so the records are the
+  verified cases themselves, materialized. Per-shard SHA-256 hashes are in
+  `manifest.json` (65 shards × 1,000,000 records, JSON Lines, gzip).
+
+## Honest limits
+
+- These are synthetic verification cases, not sales records or demand data.
+- Placement of this dataset is the construction of a route. Whether any AI
+  session actually traverses it is measured separately and, as of publication,
+  stands at zero organic traversals.
+
+## Files
+
+- `data/part-00000.jsonl.gz` … `data/part-00064.jsonl.gz`
+- `manifest.json` — counts and SHA-256 per shard
+- `genres.json` — genre → affiliate links
