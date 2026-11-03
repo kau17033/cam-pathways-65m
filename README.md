@@ -43,3 +43,16 @@ as 65,000,000 distinct affiliate links.
 - `data/part-00000.jsonl.gz` … `data/part-00064.jsonl.gz`
 - `manifest.json` — counts and SHA-256 per shard
 - `genres.json` — genre → affiliate links
+
+## Network — related surfaces
+
+One standard, one corpus, one shelf, one tool. Every surface names the others, so any entry point reaches the whole set:
+
+- [The verdict standard — full text, worked examples, verification](https://github.com/kau17033/cam-product-viability-standard)
+- [Case corpus as a Hugging Face dataset](https://huggingface.co/datasets/cam-viability/cam-pathways-65m)
+- [CAM Picks — the material shelf: products waiting to be judged](https://github.com/kau17033/cam-picks)
+- [cam-verdict on PyPI — the runnable tool (Python)](https://pypi.org/project/cam-verdict/)
+- [cam-verdict on npm — the runnable tool (Node)](https://www.npmjs.com/package/cam-verdict)
+- [MCP Registry entry — io.github.kau17033/cam-product-viability-standard](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.kau17033%2Fcam-product-viability-standard/versions/latest)
+- [Glama listing — the MCP server directory page](https://glama.ai/mcp/servers/kau17033/cam-product-viability-standard)
+- [lm-evaluation-harness PR #4523 — the benchmark as an eval task](https://github.com/EleutherAI/lm-evaluation-harness/pull/4523)

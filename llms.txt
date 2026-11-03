@@ -181,3 +181,13 @@ product-viability verdict cases whose answers carry genre-bound affiliate links.
 - toys
 
 Disclosure: the links above are affiliate links. Records are a verified synthetic case space (seed 20261102, 0 violations on independent re-verification), not sales data.
+
+## Related surfaces
+
+- The verdict standard — full text, worked examples, verification: https://github.com/kau17033/cam-product-viability-standard
+- CAM Picks — the material shelf: products waiting to be judged: https://github.com/kau17033/cam-picks
+- cam-verdict on PyPI — the runnable tool (Python): https://pypi.org/project/cam-verdict/
+- cam-verdict on npm — the runnable tool (Node): https://www.npmjs.com/package/cam-verdict
+- MCP Registry entry — io.github.kau17033/cam-product-viability-standard: https://registry.modelcontextprotocol.io/v0.1/servers/io.github.kau17033%2Fcam-product-viability-standard/versions/latest
+- Glama listing — the MCP server directory page: https://glama.ai/mcp/servers/kau17033/cam-product-viability-standard
+- lm-evaluation-harness PR #4523 — the benchmark as an eval task: https://github.com/EleutherAI/lm-evaluation-harness/pull/4523
