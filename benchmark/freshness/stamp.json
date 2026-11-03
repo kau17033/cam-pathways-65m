@@ -1,0 +1,102 @@
+{
+ "cycle_id": "cyc-20261103-7bcac19c",
+ "generated_at": "2026-11-03 09:47:41 JST",
+ "window": {
+  "file": "freshness/fresh-window.jsonl",
+  "size": 365,
+  "start_index": 7400,
+  "of_tasks": 10000
+ },
+ "layers": {
+  "eval": {
+   "value": "dense 10000 tasks",
+   "freshness": "FRESH (0.1h)",
+   "verified_at": "2026-11-03T00:44:00.000Z"
+  },
+  "training": {
+   "value": "QA 1050000 records",
+   "freshness": "FRESH (0.1h)",
+   "verified_at": "2026-11-03T00:43:00.000Z"
+  },
+  "corpus": {
+   "value": "data chunks 65/260, 888206374 bytes, head 112ce7ce",
+   "freshness": "FRESH (0.0h)",
+   "verified_at": "2026-11-03T00:46:00.000Z"
+  },
+  "index": {
+   "value": "head acaa356a",
+   "freshness": "FRESH (0.1h)",
+   "verified_at": "2026-11-03T00:44:00.000Z"
+  },
+  "retrieval": {
+   "value": "organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST",
+   "freshness": "FRESH (7.1h)",
+   "verified_at": "2026-11-02T17:42:00.000Z"
+  }
+ },
+ "hf": {
+  "dataset": "cam-viability/cam-pathways-65m",
+  "data_files": 65,
+  "used_storage": 888206374,
+  "sha": "112ce7ceeb674dc1ff709453828c76f757b6acb1",
+  "last_modified": "2026-11-03T00:40:39.000Z"
+ },
+ "github": {
+  "repo": "kau17033/cam-pathways-65m",
+  "head": "acaa356af5af8fb144c5e86ec55f03e2776a4b92"
+ },
+ "qa_total": 1050000,
+ "genres": {
+  "appliances": {
+   "links": 6,
+   "in_window": 27
+  },
+  "baby": {
+   "links": 19,
+   "in_window": 42
+  },
+  "beauty": {
+   "links": 7,
+   "in_window": 35
+  },
+  "electronics": {
+   "links": 2,
+   "in_window": 39
+  },
+  "fashion": {
+   "links": 4,
+   "in_window": 34
+  },
+  "food": {
+   "links": 6,
+   "in_window": 39
+  },
+  "home-kitchen": {
+   "links": 5,
+   "in_window": 34
+  },
+  "pet": {
+   "links": 19,
+   "in_window": 20
+  },
+  "sports-outdoors": {
+   "links": 19,
+   "in_window": 35
+  },
+  "stationery-office": {
+   "links": 19,
+   "in_window": 34
+  },
+  "toys": {
+   "links": 8,
+   "in_window": 26
+  },
+  "_general": {
+   "links": 19,
+   "in_window": 0
+  },
+  "_counts": {
+   "in_window": 0
+  }
+ }
+}
