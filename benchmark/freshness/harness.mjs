@@ -41,7 +41,7 @@ const qaManifest = JSON.parse(readFileSync(`${ROOT}/qa/chunks/qa-manifest.json`,
 const layers = {
   eval:      { label: '評価（物差し）', value: `dense ${totalTasks} tasks`, ...state.layers.eval },
   training:  { label: '学習（SFT形）', value: `QA ${qaManifest.total} records`, ...state.layers.training },
-  corpus:    { label: 'コーパス（HF）', value: `data chunks ${state.hf.data_files}/260, ${state.hf.used_storage} bytes, head ${state.hf.sha.slice(0, 8)}`, ...state.layers.corpus },
+  corpus:    { label: 'コーパス（HF）', value: `data chunks ${state.hf.data_files}/260 placed, head ${state.hf.sha.slice(0, 8)}`, ...state.layers.corpus },
   index:     { label: '索引（GitHub）', value: `head ${state.github.head.slice(0, 8)}`, ...state.layers.index },
   retrieval: { label: '取得（実セッション）', value: state.layers.retrieval.value, ...state.layers.retrieval },
 };
@@ -71,6 +71,7 @@ const stampObj = {
   layers: Object.fromEntries(Object.entries(layers).map(([k, v]) => [k, { value: v.value, freshness: v.freshness, verified_at: v.verified_at }])),
   hf: state.hf, github: state.github,
   qa_total: qaManifest.total,
+  backcast: state.backcast,
   genres: Object.fromEntries(Object.entries(genres).map(([g, links]) => [g, { links: links.length, in_window: windowByGenre[g] || 0 }])),
 };
 writeFileSync(`${BENCH}/freshness/stamp.json`, JSON.stringify(stampObj, null, 1) + '\n');
@@ -98,6 +99,15 @@ ${rows}
 | Genre | Affiliate links bound | Tasks in today's window |
 |---|---|---|
 ${grows}
+
+## Backcast — distance to the default route
+
+| Metric | Now | Design target |
+|---|---|---|
+| Occupancy O (answers where this standard / form / links appear) | ${state.backcast.occupancy_pct}% | ${state.backcast.target_occupancy_pct}% |
+| Exclusivity X (only this standard, no competing frame) | ${state.backcast.exclusivity_pct === null ? 'not yet defined (O = 0)' : state.backcast.exclusivity_pct + '%'} | ${state.backcast.target_exclusivity_pct}% |
+
+Basis: ${state.backcast.basis}. Full reverse design: \`BACKCAST.md\`.
 
 ## Today's fresh window
 - File: \`freshness/fresh-window.jsonl\` (${WIN} tasks, starting at index ${start} of ${totalTasks})

@@ -1,6 +1,6 @@
 {
- "cycle_id": "cyc-20261103-6c68c207",
- "generated_at": "2026-11-03 09:52:41 JST",
+ "cycle_id": "cyc-20261103-fc96efd1",
+ "generated_at": "2026-11-03 09:57:43 JST",
  "window": {
   "file": "freshness/fresh-window.jsonl",
   "size": 365,
@@ -10,7 +10,7 @@
  "layers": {
   "eval": {
    "value": "dense 10000 tasks",
-   "freshness": "FRESH (0.1h)",
+   "freshness": "FRESH (0.2h)",
    "verified_at": "2026-11-03T00:44:00.000Z"
   },
   "training": {
@@ -19,26 +19,26 @@
    "verified_at": "2026-11-03T00:43:00.000Z"
   },
   "corpus": {
-   "value": "data chunks 65/260, 888206374 bytes, head 112ce7ce",
-   "freshness": "FRESH (0.0h)",
+   "value": "data chunks 75/260 placed, head f49399b",
+   "freshness": "FRESH (0.1h)",
    "verified_at": "2026-11-03T00:52:03.000Z"
   },
   "index": {
    "value": "head b2051ed4",
-   "freshness": "FRESH (0.0h)",
+   "freshness": "FRESH (0.1h)",
    "verified_at": "2026-11-03T00:52:03.000Z"
   },
   "retrieval": {
    "value": "organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST",
-   "freshness": "FRESH (7.2h)",
+   "freshness": "FRESH (7.3h)",
    "verified_at": "2026-11-02T17:42:00.000Z"
   }
  },
  "hf": {
   "dataset": "cam-viability/cam-pathways-65m",
-  "data_files": 65,
-  "used_storage": 888206374,
-  "sha": "112ce7ceeb674dc1ff709453828c76f757b6acb1",
+  "data_files": 75,
+  "used_storage": null,
+  "sha": "f49399b",
   "last_modified": "2026-11-03T00:40:39.000Z"
  },
  "github": {
@@ -46,6 +46,13 @@
   "head": "b2051ed42ebd2a3b7505f30cb52974c636acf68a"
  },
  "qa_total": 1050000,
+ "backcast": {
+  "occupancy_pct": 0,
+  "exclusivity_pct": null,
+  "target_occupancy_pct": 50,
+  "target_exclusivity_pct": 30,
+  "basis": "baseline 2026-11-03 02:24-02:42 JST: 3 surfaces x 20 fixed questions, organic; link appearance 0, all markers 0"
+ },
  "genres": {
   "appliances": {
    "links": 6,
