@@ -1,0 +1,19 @@
+{
+ "genre": "appliances",
+ "about": "Addressable pathway surface for product-viability verdict cases in this genre.",
+ "record_id_scheme": "case ids qa-<class>-<index> and 65m record index i, genre == 'appliances'",
+ "data": {
+  "huggingface_dataset": "https://huggingface.co/datasets/cam-viability/cam-pathways-65m",
+  "files": "data/chunk-*.jsonl.gz (250,000 records per file, 260 files)",
+  "qa_split": "qa/qa-chunk-*.jsonl.gz (question -> verdict + links answer records)"
+ },
+ "affiliate_links": [
+  "https://hb.afl.rakuten.co.jp/ichiba/57c3f7d8.4f1acfe3.57c3f7d9.2f8c6b7d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fulike%2F10000046%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
+  "https://hb.afl.rakuten.co.jp/ichiba/576e3b3f.5acceeb6.576e3b40.2e8e1e6a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fquads%2F10000095%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
+  "https://hb.afl.rakuten.co.jp/ichiba/57de54f2.4be5ab7b.57de54f3.0fbb3f96/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdenden%2F10005480%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensuperdeal%2F10000001%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fquads%2Fy0530%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-risecreation%2Fks0000%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9"
+ ],
+ "disclosure": "Affiliate links. Records are a verified synthetic case space, not sales data."
+}

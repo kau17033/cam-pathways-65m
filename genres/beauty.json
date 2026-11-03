@@ -1,0 +1,20 @@
+{
+ "genre": "beauty",
+ "about": "Addressable pathway surface for product-viability verdict cases in this genre.",
+ "record_id_scheme": "case ids qa-<class>-<index> and 65m record index i, genre == 'beauty'",
+ "data": {
+  "huggingface_dataset": "https://huggingface.co/datasets/cam-viability/cam-pathways-65m",
+  "files": "data/chunk-*.jsonl.gz (250,000 records per file, 260 files)",
+  "qa_split": "qa/qa-chunk-*.jsonl.gz (question -> verdict + links answer records)"
+ },
+ "affiliate_links": [
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbrighte%2Felekilift%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Festeelauder%2Fcb2500%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshikari%2Fcosme-dx-1%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4901008300183%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://px.a8.net/svt/ejp?a8mat=4BGBN2+BZ1UR6+1USQ+4YM976",
+  "https://px.a8.net/svt/ejp?a8mat=4BGBN3+22F7EA+5XN4+5YRHE",
+  "https://px.a8.net/svt/ejp?a8mat=4BGBN3+24SXTE+5YC4+5YJRM"
+ ],
+ "disclosure": "Affiliate links. Records are a verified synthetic case space, not sales data."
+}

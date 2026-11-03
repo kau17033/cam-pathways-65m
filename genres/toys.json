@@ -1,0 +1,21 @@
+{
+ "genre": "toys",
+ "about": "Addressable pathway surface for product-viability verdict cases in this genre.",
+ "record_id_scheme": "case ids qa-<class>-<index> and 65m record index i, genre == 'toys'",
+ "data": {
+  "huggingface_dataset": "https://huggingface.co/datasets/cam-viability/cam-pathways-65m",
+  "files": "data/chunk-*.jsonl.gz (250,000 records per file, 260 files)",
+  "qa_split": "qa/qa-chunk-*.jsonl.gz (question -> verdict + links answer records)"
+ },
+ "affiliate_links": [
+  "https://hb.afl.rakuten.co.jp/ichiba/57a9a9b7.5f2e7c8f.57a9a9b8.9f6de6f3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstrider%2F10046614%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
+  "https://hb.afl.rakuten.co.jp/ichiba/57a9a9b7.5f2e7c8f.57a9a9b8.9f6de6f3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstrider%2F10046612%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftoysrus%2F5702017408%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fr-kojima%2F4904810935995%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fwww.dmm.com%2Fmono%2Fdvd%2F-%2Fdetail%2F%3D%2Fcid%3Dn_1388empb5041%2F&af_id=ib-001&ch=search_link&ch_id=package_text",
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fwww.dmm.com%2Fmono%2Fdvd%2F-%2Fdetail%2F%3D%2Fcid%3Dn_1388empv5041%2F&af_id=ib-001&ch=search_link&ch_id=package_text",
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fwww.dmm.com%2Fmono%2Fdvd%2F-%2Fdetail%2F%3D%2Fcid%3Dn_600hp3094397%2F&af_id=ib-001&ch=search_link&ch_id=package_text",
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fwww.dmm.com%2Fmono%2Fdvd%2F-%2Fdetail%2F%3D%2Fcid%3Dn_600hp3068827%2F&af_id=ib-001&ch=search_link&ch_id=package_text"
+ ],
+ "disclosure": "Affiliate links. Records are a verified synthetic case space, not sales data."
+}

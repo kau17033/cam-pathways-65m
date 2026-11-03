@@ -1,0 +1,32 @@
+{
+ "genre": "_general",
+ "about": "Addressable pathway surface for product-viability verdict cases in this genre.",
+ "record_id_scheme": "case ids qa-<class>-<index> and 65m record index i, genre == '_general'",
+ "data": {
+  "huggingface_dataset": "https://huggingface.co/datasets/cam-viability/cam-pathways-65m",
+  "files": "data/chunk-*.jsonl.gz (250,000 records per file, 260 files)",
+  "qa_split": "qa/qa-chunk-*.jsonl.gz (question -> verdict + links answer records)"
+ },
+ "affiliate_links": [
+  "https://hb.afl.rakuten.co.jp/ichiba/590e78c6.3d0fc3d6.590e78c7.aee02fee/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdajie%2Fstoole_powder%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
+  "https://hb.afl.rakuten.co.jp/ichiba/57b6c7d8.bdbd9d2f.57b6c7d9.d7f51a02/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnerus%2F10000344%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fatone%2F20000000%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2Fe10001260%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-risecreation%2Fks0092%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdelivery%2Fdh001%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenfro%2F10001730%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fbook.dmm.com%2Fproduct%2F6252202%2Fb073bktcm07998%2F&af_id=ib-001&ch=search_link&ch_id=package_text",
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fbook.dmm.com%2Fproduct%2F4228078%2Fb900alds09847%2F&af_id=ib-001&ch=search_link&ch_id=package_text",
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fbook.dmm.com%2Fproduct%2F109083%2Fb371khkss09833%2F&af_id=ib-001&ch=search_link&ch_id=package_text",
+  "https://al.dmm.com/?lurl=https%3A%2F%2Fbook.dmm.com%2Fproduct%2F4031297%2Fb000fhftx20641%2F&af_id=ib-001&ch=search_link&ch_id=package_text",
+  "https://px.a8.net/svt/ejp?a8mat=4BGBN2+CM9RCI+5YCY+BW0YB&a8ejpredirect=https%3A%2F%2Fdearmini.jp%2F",
+  "https://click.linksynergy.com/fs-bin/click?id=Nkr%2fEs0s53I&offerid=1659758.3&type=3&subid=0",
+  "https://click.linksynergy.com/fs-bin/click?id=Nkr%2fEs0s53I&offerid=1068147.3&type=3&subid=0",
+  "https://click.linksynergy.com/fs-bin/click?id=Nkr%2fEs0s53I&offerid=1383374.393&type=3&subid=0",
+  "https://aviasales.tpo.lu/KcqzF9Lz",
+  "https://airhelp.tpo.lu/teD61Vz8",
+  "https://compensair.tpo.lu/0KN27nIt",
+  "https://kkday.tpo.lu/Bsbrosmg"
+ ],
+ "disclosure": "Affiliate links. Records are a verified synthetic case space, not sales data."
+}

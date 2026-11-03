@@ -1,0 +1,18 @@
+{
+ "genre": "home-kitchen",
+ "about": "Addressable pathway surface for product-viability verdict cases in this genre.",
+ "record_id_scheme": "case ids qa-<class>-<index> and 65m record index i, genre == 'home-kitchen'",
+ "data": {
+  "huggingface_dataset": "https://huggingface.co/datasets/cam-viability/cam-pathways-65m",
+  "files": "data/chunk-*.jsonl.gz (250,000 records per file, 260 files)",
+  "qa_split": "qa/qa-chunk-*.jsonl.gz (question -> verdict + links answer records)"
+ },
+ "affiliate_links": [
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fscope%2Fara79a11111%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fscope%2Fara79a11112%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://hb.afl.rakuten.co.jp/hgc/590e7a76.13cb3fff.590e7a77.ea715e52/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-kit%2Fkitchen-01%2F&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
+  "https://px.a8.net/svt/ejp?a8mat=4BGBN2+C3I6B2+5X7O+BW0YB&a8ejpredirect=https%3A%2F%2Fblueboxsleep.jp%2Fproducts%2F%25E3%2583%259E%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AC%25E3%2582%25B9-z1-%25E3%2582%25B3%25E3%2582%25A4",
+  "https://px.a8.net/svt/ejp?a8mat=4BGBN2+C9RNN6+5XHK+BWVTE"
+ ],
+ "disclosure": "Affiliate links. Records are a verified synthetic case space, not sales data."
+}

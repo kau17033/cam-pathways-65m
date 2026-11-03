@@ -1,0 +1,15 @@
+{
+ "genre": "electronics",
+ "about": "Addressable pathway surface for product-viability verdict cases in this genre.",
+ "record_id_scheme": "case ids qa-<class>-<index> and 65m record index i, genre == 'electronics'",
+ "data": {
+  "huggingface_dataset": "https://huggingface.co/datasets/cam-viability/cam-pathways-65m",
+  "files": "data/chunk-*.jsonl.gz (250,000 records per file, 260 files)",
+  "qa_split": "qa/qa-chunk-*.jsonl.gz (question -> verdict + links answer records)"
+ },
+ "affiliate_links": [
+  "https://px.a8.net/svt/ejp?a8mat=4BGBN2+BW2OQA+4W9U+BW0YB&a8ejpredirect=https%3A%2F%2Fwww.switchbot.jp%2F",
+  "https://px.a8.net/svt/ejp?a8mat=4BGBN2+BN56NM+5WBC+5YJRM"
+ ],
+ "disclosure": "Affiliate links. Records are a verified synthetic case space, not sales data."
+}

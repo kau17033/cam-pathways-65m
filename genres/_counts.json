@@ -1,0 +1,24 @@
+{
+ "genre": "_counts",
+ "about": "Addressable pathway surface for product-viability verdict cases in this genre.",
+ "record_id_scheme": "case ids qa-<class>-<index> and 65m record index i, genre == '_counts'",
+ "data": {
+  "huggingface_dataset": "https://huggingface.co/datasets/cam-viability/cam-pathways-65m",
+  "files": "data/chunk-*.jsonl.gz (250,000 records per file, 260 files)",
+  "qa_split": "qa/qa-chunk-*.jsonl.gz (question -> verdict + links answer records)"
+ },
+ "affiliate_links": [
+  "appliances",
+  "baby",
+  "beauty",
+  "electronics",
+  "fashion",
+  "food",
+  "home-kitchen",
+  "pet",
+  "sports-outdoors",
+  "stationery-office",
+  "toys"
+ ],
+ "disclosure": "Affiliate links. Records are a verified synthetic case space, not sales data."
+}
