@@ -1,6 +1,6 @@
 {
- "cycle_id": "cyc-20261103-7bcac19c",
- "generated_at": "2026-11-03 09:47:41 JST",
+ "cycle_id": "cyc-20261103-6c68c207",
+ "generated_at": "2026-11-03 09:52:41 JST",
  "window": {
   "file": "freshness/fresh-window.jsonl",
   "size": 365,
@@ -15,22 +15,22 @@
   },
   "training": {
    "value": "QA 1050000 records",
-   "freshness": "FRESH (0.1h)",
+   "freshness": "FRESH (0.2h)",
    "verified_at": "2026-11-03T00:43:00.000Z"
   },
   "corpus": {
    "value": "data chunks 65/260, 888206374 bytes, head 112ce7ce",
    "freshness": "FRESH (0.0h)",
-   "verified_at": "2026-11-03T00:46:00.000Z"
+   "verified_at": "2026-11-03T00:52:03.000Z"
   },
   "index": {
-   "value": "head acaa356a",
-   "freshness": "FRESH (0.1h)",
-   "verified_at": "2026-11-03T00:44:00.000Z"
+   "value": "head b2051ed4",
+   "freshness": "FRESH (0.0h)",
+   "verified_at": "2026-11-03T00:52:03.000Z"
   },
   "retrieval": {
    "value": "organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST",
-   "freshness": "FRESH (7.1h)",
+   "freshness": "FRESH (7.2h)",
    "verified_at": "2026-11-02T17:42:00.000Z"
   }
  },
@@ -43,7 +43,7 @@
  },
  "github": {
   "repo": "kau17033/cam-pathways-65m",
-  "head": "acaa356af5af8fb144c5e86ec55f03e2776a4b92"
+  "head": "b2051ed42ebd2a3b7505f30cb52974c636acf68a"
  },
  "qa_total": 1050000,
  "genres": {

@@ -1,6 +1,6 @@
 # Benchmark Freshness — the ruler, kept fresh
 
-Cycle: `cyc-20261103-7bcac19c` · Generated: 2026-11-03 09:47:41 JST
+Cycle: `cyc-20261103-6c68c207` · Generated: 2026-11-03 09:52:41 JST
 
 The benchmark is not a fixed pile. Every cycle it senses the verified state of
 every layer, rotates a fresh window of tasks (deterministic by date — the
@@ -13,10 +13,10 @@ Same cycle id on a surface = the circulation reached it.
 | Layer | State | Freshness |
 |---|---|---|
 | 評価（物差し） | dense 10000 tasks | FRESH (0.1h) |
-| 学習（SFT形） | QA 1050000 records | FRESH (0.1h) |
+| 学習（SFT形） | QA 1050000 records | FRESH (0.2h) |
 | コーパス（HF） | data chunks 65/260, 888206374 bytes, head 112ce7ce | FRESH (0.0h) |
-| 索引（GitHub） | head acaa356a | FRESH (0.1h) |
-| 取得（実セッション） | organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST | FRESH (7.1h) |
+| 索引（GitHub） | head b2051ed4 | FRESH (0.0h) |
+| 取得（実セッション） | organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST | FRESH (7.2h) |
 
 ## Genre spread (horizontal)
 
