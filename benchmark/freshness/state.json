@@ -1,43 +1,43 @@
 {
- "hf": {
-  "dataset": "cam-viability/cam-pathways-65m",
-  "data_files": 75,
-  "used_storage": null,
-  "sha": "f49399b",
-  "last_modified": "2026-11-03T00:40:39.000Z"
- },
- "github": {
-  "repo": "kau17033/cam-pathways-65m",
-  "head": "b2051ed42ebd2a3b7505f30cb52974c636acf68a"
- },
- "layers": {
-  "eval": {
-   "verified_at": "2026-11-03T00:44:00.000Z",
-   "ttl_hours": 24
-  },
-  "training": {
-   "verified_at": "2026-11-03T00:43:00.000Z",
-   "ttl_hours": 168
-  },
-  "corpus": {
-   "verified_at": "2026-11-03T00:52:03.000Z",
-   "ttl_hours": 24
-  },
-  "index": {
-   "verified_at": "2026-11-03T00:52:03.000Z",
-   "ttl_hours": 24
-  },
-  "retrieval": {
-   "verified_at": "2026-11-02T17:42:00.000Z",
-   "ttl_hours": 24,
-   "value": "organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST"
-  }
- },
- "backcast": {
-  "occupancy_pct": 0,
-  "exclusivity_pct": null,
-  "target_occupancy_pct": 50,
-  "target_exclusivity_pct": 30,
-  "basis": "baseline 2026-11-03 02:24-02:42 JST: 3 surfaces x 20 fixed questions, organic; link appearance 0, all markers 0"
- }
+    "hf": {
+        "dataset": "cam-viability/cam-pathways-65m",
+        "data_files": 260,
+        "used_storage": 2517811160,
+        "sha": "fdd41ced1aa98019bc1be1ce022afc0895e81ff9",
+        "last_modified": "2026-11-03T09:00:17.000Z"
+    },
+    "github": {
+        "repo": "kau17033/cam-pathways-65m",
+        "head": "3f8ae96bfc877eb4dfa164ab4296cf9d2df2c65f"
+    },
+    "layers": {
+        "eval": {
+            "verified_at": "2026-11-03T00:44:00.000Z",
+            "ttl_hours": 24
+        },
+        "training": {
+            "verified_at": "2026-11-03T00:43:00.000Z",
+            "ttl_hours": 168
+        },
+        "corpus": {
+            "verified_at": "2026-11-03T22:43:22.000Z",
+            "ttl_hours": 24
+        },
+        "index": {
+            "verified_at": "2026-11-03T22:43:22.000Z",
+            "ttl_hours": 24
+        },
+        "retrieval": {
+            "verified_at": "2026-11-02T17:42:00.000Z",
+            "ttl_hours": 24,
+            "value": "organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST"
+        }
+    },
+    "backcast": {
+        "occupancy_pct": 0,
+        "exclusivity_pct": null,
+        "target_occupancy_pct": 50,
+        "target_exclusivity_pct": 30,
+        "basis": "baseline 2026-11-03 02:24-02:42 JST: 3 surfaces x 20 fixed questions, organic; link appearance 0, all markers 0"
+    }
 }

@@ -1,49 +1,49 @@
 {
- "cycle_id": "cyc-20261103-fc96efd1",
- "generated_at": "2026-11-03 09:57:43 JST",
+ "cycle_id": "cyc-20261104-4bdb3e3b",
+ "generated_at": "2026-11-04 07:43:23 JST",
  "window": {
   "file": "freshness/fresh-window.jsonl",
   "size": 365,
-  "start_index": 7400,
+  "start_index": 7765,
   "of_tasks": 10000
  },
  "layers": {
   "eval": {
    "value": "dense 10000 tasks",
-   "freshness": "FRESH (0.2h)",
+   "freshness": "FRESH (22.0h)",
    "verified_at": "2026-11-03T00:44:00.000Z"
   },
   "training": {
    "value": "QA 1050000 records",
-   "freshness": "FRESH (0.2h)",
+   "freshness": "FRESH (22.0h)",
    "verified_at": "2026-11-03T00:43:00.000Z"
   },
   "corpus": {
-   "value": "data chunks 75/260 placed, head f49399b",
-   "freshness": "FRESH (0.1h)",
-   "verified_at": "2026-11-03T00:52:03.000Z"
+   "value": "data chunks 260/260 placed, head fdd41ced",
+   "freshness": "FRESH (0.0h)",
+   "verified_at": "2026-11-03T22:43:22.000Z"
   },
   "index": {
-   "value": "head b2051ed4",
-   "freshness": "FRESH (0.1h)",
-   "verified_at": "2026-11-03T00:52:03.000Z"
+   "value": "head 3f8ae96b",
+   "freshness": "FRESH (0.0h)",
+   "verified_at": "2026-11-03T22:43:22.000Z"
   },
   "retrieval": {
    "value": "organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST",
-   "freshness": "FRESH (7.3h)",
+   "freshness": "STALE (29.0h > TTL 24h)",
    "verified_at": "2026-11-02T17:42:00.000Z"
   }
  },
  "hf": {
   "dataset": "cam-viability/cam-pathways-65m",
-  "data_files": 75,
-  "used_storage": null,
-  "sha": "f49399b",
-  "last_modified": "2026-11-03T00:40:39.000Z"
+  "data_files": 260,
+  "used_storage": 2517811160,
+  "sha": "fdd41ced1aa98019bc1be1ce022afc0895e81ff9",
+  "last_modified": "2026-11-03T09:00:17.000Z"
  },
  "github": {
   "repo": "kau17033/cam-pathways-65m",
-  "head": "b2051ed42ebd2a3b7505f30cb52974c636acf68a"
+  "head": "3f8ae96bfc877eb4dfa164ab4296cf9d2df2c65f"
  },
  "qa_total": 1050000,
  "backcast": {
@@ -56,53 +56,54 @@
  "genres": {
   "appliances": {
    "links": 6,
-   "in_window": 27
+   "in_window": 41
   },
   "baby": {
    "links": 19,
-   "in_window": 42
+   "in_window": 22
   },
   "beauty": {
    "links": 7,
-   "in_window": 35
+   "in_window": 31
   },
   "electronics": {
    "links": 2,
-   "in_window": 39
+   "in_window": 24
   },
   "fashion": {
    "links": 4,
-   "in_window": 34
+   "in_window": 39
   },
   "food": {
    "links": 6,
-   "in_window": 39
+   "in_window": 36
   },
   "home-kitchen": {
    "links": 5,
-   "in_window": 34
+   "in_window": 42
   },
   "pet": {
    "links": 19,
-   "in_window": 20
+   "in_window": 37
   },
   "sports-outdoors": {
    "links": 19,
-   "in_window": 35
+   "in_window": 26
   },
   "stationery-office": {
    "links": 19,
-   "in_window": 34
+   "in_window": 31
   },
   "toys": {
    "links": 8,
-   "in_window": 26
+   "in_window": 36
   },
   "_general": {
    "links": 19,
    "in_window": 0
   },
   "_counts": {
+   "links": 11,
    "in_window": 0
   }
  }
