@@ -2,13 +2,13 @@
     "hf": {
         "dataset": "cam-viability/cam-pathways-65m",
         "data_files": 260,
-        "used_storage": 2517811160,
+        "used_storage": 4166087961,
         "sha": "b4fe25f32709e36f95901c023ab45c03c3cfe33b",
         "last_modified": "2026-11-04T00:52:37.000Z"
     },
     "github": {
         "repo": "kau17033/cam-pathways-65m",
-        "head": "f709c85322191fb3d75e81105757139e4042dc6e"
+        "head": "4f33be6ac379032f7edaf6b76419c2070bc922da"
     },
     "layers": {
         "eval": {
