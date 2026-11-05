@@ -1,36 +1,36 @@
 {
- "cycle_id": "cyc-20261104-4bdb3e3b",
- "generated_at": "2026-11-04 07:43:23 JST",
+ "cycle_id": "cyc-20261105-21d0f061",
+ "generated_at": "2026-11-05 07:46:39 JST",
  "window": {
   "file": "freshness/fresh-window.jsonl",
   "size": 365,
-  "start_index": 7765,
+  "start_index": 8130,
   "of_tasks": 10000
  },
  "layers": {
   "eval": {
    "value": "dense 10000 tasks",
-   "freshness": "FRESH (22.0h)",
+   "freshness": "STALE (46.0h > TTL 24h)",
    "verified_at": "2026-11-03T00:44:00.000Z"
   },
   "training": {
    "value": "QA 1050000 records",
-   "freshness": "FRESH (22.0h)",
+   "freshness": "FRESH (46.1h)",
    "verified_at": "2026-11-03T00:43:00.000Z"
   },
   "corpus": {
-   "value": "data chunks 260/260 placed, head fdd41ced",
-   "freshness": "FRESH (0.0h)",
+   "value": "data chunks 260/260 placed, head b4fe25f3",
+   "freshness": "STALE (24.1h > TTL 24h)",
    "verified_at": "2026-11-03T22:43:22.000Z"
   },
   "index": {
-   "value": "head 3f8ae96b",
+   "value": "head f709c853",
    "freshness": "FRESH (0.0h)",
-   "verified_at": "2026-11-03T22:43:22.000Z"
+   "verified_at": "2026-11-04T22:46:30.000Z"
   },
   "retrieval": {
    "value": "organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST",
-   "freshness": "STALE (29.0h > TTL 24h)",
+   "freshness": "STALE (53.1h > TTL 24h)",
    "verified_at": "2026-11-02T17:42:00.000Z"
   }
  },
@@ -38,12 +38,12 @@
   "dataset": "cam-viability/cam-pathways-65m",
   "data_files": 260,
   "used_storage": 2517811160,
-  "sha": "fdd41ced1aa98019bc1be1ce022afc0895e81ff9",
-  "last_modified": "2026-11-03T09:00:17.000Z"
+  "sha": "b4fe25f32709e36f95901c023ab45c03c3cfe33b",
+  "last_modified": "2026-11-04T00:52:37.000Z"
  },
  "github": {
   "repo": "kau17033/cam-pathways-65m",
-  "head": "3f8ae96bfc877eb4dfa164ab4296cf9d2df2c65f"
+  "head": "f709c85322191fb3d75e81105757139e4042dc6e"
  },
  "qa_total": 1050000,
  "backcast": {
@@ -60,43 +60,43 @@
   },
   "baby": {
    "links": 19,
-   "in_window": 22
+   "in_window": 31
   },
   "beauty": {
    "links": 7,
-   "in_window": 31
+   "in_window": 20
   },
   "electronics": {
    "links": 2,
-   "in_window": 24
+   "in_window": 37
   },
   "fashion": {
    "links": 4,
-   "in_window": 39
+   "in_window": 33
   },
   "food": {
    "links": 6,
-   "in_window": 36
+   "in_window": 31
   },
   "home-kitchen": {
    "links": 5,
-   "in_window": 42
+   "in_window": 22
   },
   "pet": {
    "links": 19,
-   "in_window": 37
+   "in_window": 48
   },
   "sports-outdoors": {
    "links": 19,
-   "in_window": 26
+   "in_window": 33
   },
   "stationery-office": {
    "links": 19,
-   "in_window": 31
+   "in_window": 36
   },
   "toys": {
    "links": 8,
-   "in_window": 36
+   "in_window": 33
   },
   "_general": {
    "links": 19,
