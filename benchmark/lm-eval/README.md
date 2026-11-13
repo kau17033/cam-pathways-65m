@@ -86,3 +86,7 @@ profit-calculation correctness benchmark for AI systems.
   1,500 partial), validated on lm-evaluation-harness 0.4.13.
 
 - v2.0 (2026-11-13): `process_docs_partial` migrates historical HOLD placeholders in-memory to `INCOMPLETE`, `verdict: null`. Legacy 2026-11-02 data remain byte-identical; run `prepare_dataset.py` for an optional materialized v2 export. The 65M historical verification was not rerun.
+
+### Explicit synthetic stock fixture in v2
+
+The original dense encoding omitted stock. The amended standard does **not** treat absent stock as a passing check. V2 **constructs a distinct synthetic benchmark input with `stock: 1`** for each of the 8,493 retained complete test cases, in both the generated export and the in-memory `process_docs_complete` migration. This value is benchmark-defined test data, not inferred marketplace inventory. Seven historically under-determined zero-stock source cases remain excluded. This transformation does not modify the original 65M synthetic corpus or its verification certificate.

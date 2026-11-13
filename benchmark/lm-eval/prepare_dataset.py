@@ -46,12 +46,12 @@ def convert(row):
     base = {"id": f"cam-{row['i']}", "genre": row["g"]}
     base.update(dict(zip(MONEY_KEYS, row["p"])))
     if row["c"] == "C":  # partial records carry no criteria in the source set
-        base.update({"targetProfit": None, "deliveryDays": None,
+        base.update({"stock": None, "targetProfit": None, "deliveryDays": None,
                      "maxDeliveryDays": None, "estimateAgeDays": None,
                      "maxEstimateAgeDays": None})
     else:
         k = row["k"]
-        base.update({"targetProfit": k[0], "deliveryDays": row["dd"],
+        base.update({"stock": 1, "targetProfit": k[0], "deliveryDays": row["dd"],
                      "maxDeliveryDays": k[1], "estimateAgeDays": row["age"],
                      "maxEstimateAgeDays": k[2]})
     if row["c"] == "C":

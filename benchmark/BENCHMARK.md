@@ -61,3 +61,5 @@ verified synthetic case space, not sales data.
 ## No-verdict contract v2 (2026-11-13)
 
 The 2026-11-02 65M verification, `tasks-dense.jsonl`, `tasks.jsonl`, `score.py`, and `lm-eval/data/cam_product_viability.jsonl` remain unchanged as legacy evidence. Their incomplete-case HOLD was a placeholder, not an issued verdict. V2 lm-evaluation-harness evaluation converts all 1,500 partial cases in memory to `status: INCOMPLETE`, `verdict: null`, and `CAM status: INCOMPLETE` target lines; complete cases are unchanged. V1/V2 scores must not be compared without re-evaluation.
+
+For completeness under the amended five-check standard, each v2 complete evaluation prompt explicitly includes synthetic `stock: 1` as a new benchmark fixture value. Stock is not inferred from the legacy compressed record or any real product; the 7 historically zero-stock cases stay excluded. This v2 fixture does not constitute a 65M re-verification.

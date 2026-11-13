@@ -22,8 +22,8 @@ RULES = """Decide the product viability verdict under the CAM standard.
 The six money items are price, cost (item cost), shipping, fee (marketplace/payment fees), returnReserve (expected return cost) and otherVariable (other variable costs). Count every item, including the return reserve.
 profit = price - (cost + shipping + fee + returnReserve + otherVariable)
 - If profit is 0 or less, the verdict is REJECT.
-- Otherwise, if profit is below targetProfit, or deliveryDays is above maxDeliveryDays, or estimateAgeDays is above maxEstimateAgeDays, the verdict is HOLD.
-- Otherwise the verdict is TEST_CANDIDATE.
+- Otherwise, if profit is below targetProfit, deliveryDays is above maxDeliveryDays, stock is zero or below, estimateAgeDays is above maxEstimateAgeDays, or any gate is unconfirmed, the verdict is HOLD.
+- Otherwise the verdict is TEST_CANDIDATE; all five checks must pass. The complete evaluation prompt explicitly defines stock = 1 as a synthetic fixture assumption, never as an observed stock level.
 - If any money item is not provided, never guess it: status is INCOMPLETE, no verdict is issued, and every missing item must be named.
 
 Answer with exactly one line, in one of these two forms:
@@ -48,6 +48,7 @@ def doc_to_text(doc: dict) -> str:
     for key in MONEY_KEYS:
         lines.append(f"{key}: {_fmt(doc[key])}")
     if doc["subset"] != "partial":
+        lines.append(f"stock: {_fmt(doc['stock'])} (benchmark-defined synthetic input)")
         lines.append(f"targetProfit: {_fmt(doc['targetProfit'])}")
         lines.append(f"deliveryDays: {_fmt(doc['deliveryDays'])}")
         lines.append(f"maxDeliveryDays: {_fmt(doc['maxDeliveryDays'])}")
@@ -58,8 +59,16 @@ def doc_to_text(doc: dict) -> str:
     return "\n".join(lines)
 
 
+def _migrate_complete(doc):
+    """Explicitly define an in-stock benchmark fixture; no market data is inferred."""
+    doc = dict(doc)
+    doc["stock"] = 1
+    doc["expected_status"] = "VERDICT"
+    return doc
+
+
 def process_docs_complete(dataset):
-    return dataset.filter(lambda doc: doc["subset"] == "complete")
+    return dataset.filter(lambda doc: doc["subset"] == "complete").map(_migrate_complete)
 
 
 def _migrate_partial(doc):
