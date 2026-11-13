@@ -57,3 +57,7 @@ Genre link bindings for the cases live in the companion dataset
 (cam-viability/cam-pathways-65m on Hugging Face) and in genres.json.
 Disclosure: genre bindings contain affiliate links. The cases themselves are a
 verified synthetic case space, not sales data.
+
+## No-verdict contract v2 (2026-11-13)
+
+The 2026-11-02 65M verification, `tasks-dense.jsonl`, `tasks.jsonl`, `score.py`, and `lm-eval/data/cam_product_viability.jsonl` remain unchanged as legacy evidence. Their incomplete-case HOLD was a placeholder, not an issued verdict. V2 lm-evaluation-harness evaluation converts all 1,500 partial cases in memory to `status: INCOMPLETE`, `verdict: null`, and `CAM status: INCOMPLETE` target lines; complete cases are unchanged. V1/V2 scores must not be compared without re-evaluation.

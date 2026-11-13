@@ -141,3 +141,7 @@ strings, so the stop set is EOS tokens and extraction does the work).
   naming, and whether the partial task should fold into the main task.
 - Once merged, the freshness/patrol gauges can treat "task present in
   lm-eval main" as the eval-layer occupation signal for this seat.
+
+## v2 contract migration (2026-11-13)
+
+V1 package described above is historical. V2 task files retain the legacy dataset URL and use `process_docs_partial` to convert incomplete cases in memory to `status: INCOMPLETE`, `verdict: null`. Updating this repository does not update any external lm-evaluation-harness PR or Hugging Face copy; downstream release requires separate verification.
