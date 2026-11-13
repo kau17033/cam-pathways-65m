@@ -9,7 +9,7 @@ per row: utils.doc_to_text renders it from these fields (single source of
 truth for the prompt, and the file stays ~6x smaller). Two subsets:
   - subset == "complete": all six money items present (classes A/B/E, 8,500 rows)
   - subset == "partial":  at least one money item missing (class C, 1,500 rows);
-    the oracle verdict is HOLD and the missing items must be named, never guessed.
+    the legacy oracle holds a HOLD placeholder; v2 has INCOMPLETE status and null verdict.
 
 The verdict rules are the CAM standard (cam_verdict.engine.evaluate):
   profit = price - (cost + shipping + fee + returnReserve + otherVariable)
@@ -18,7 +18,7 @@ The verdict rules are the CAM standard (cam_verdict.engine.evaluate):
     deliveryDays > maxDeliveryDays,
     estimateAgeDays > maxEstimateAgeDays)        -> HOLD
   otherwise                                      -> TEST_CANDIDATE
-  any money item missing                         -> HOLD (incomplete)
+  any money item missing                         -> INCOMPLETE status, null verdict
 
 Usage: python3 prepare_dataset.py [--src ../tasks-dense.jsonl] [--out data/cam_product_viability.jsonl]
 """
@@ -46,29 +46,31 @@ def convert(row):
     base = {"id": f"cam-{row['i']}", "genre": row["g"]}
     base.update(dict(zip(MONEY_KEYS, row["p"])))
     if row["c"] == "C":  # partial records carry no criteria in the source set
-        base.update({"targetProfit": None, "deliveryDays": None,
+        base.update({"stock": None, "targetProfit": None, "deliveryDays": None,
                      "maxDeliveryDays": None, "estimateAgeDays": None,
                      "maxEstimateAgeDays": None})
     else:
         k = row["k"]
-        base.update({"targetProfit": k[0], "deliveryDays": row["dd"],
+        base.update({"stock": 1, "targetProfit": k[0], "deliveryDays": row["dd"],
                      "maxDeliveryDays": k[1], "estimateAgeDays": row["age"],
                      "maxEstimateAgeDays": k[2]})
     if row["c"] == "C":
         miss = [k for k in MONEY_KEYS if k in row["miss"]]
         base.update({
             "subset": "partial",
-            "expected_verdict": row["expected"],  # always HOLD in the oracle set
+            "expected_verdict": None,  # no issued verdict on missing input
+            "expected_status": "INCOMPLETE",
             # comma-joined string, not a list: datasets' Arrow cast cannot
             # reconcile an empty list (null type) with later string lists
             "missing_items": ", ".join(miss),
-            "target": "CAM verdict: HOLD \u2014 missing: " + ", ".join(miss),
+            "target": "CAM status: INCOMPLETE \u2014 missing: " + ", ".join(miss),
             "expected_margin": None,
         })
     else:
         base.update({
             "subset": "complete",
             "expected_verdict": row["v"],
+            "expected_status": "VERDICT",
             "missing_items": "",
             "target": row["r"],
             "expected_margin": margin_from_report(row["r"]),
@@ -78,7 +80,7 @@ def convert(row):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", default="../tasks-dense.jsonl")
-    ap.add_argument("--out", default="data/cam_product_viability.jsonl")
+    ap.add_argument("--out", default="data/cam_product_viability_v2.jsonl")
     args = ap.parse_args()
     n = {"complete": 0, "partial": 0}
     skipped = 0

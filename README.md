@@ -56,3 +56,7 @@ One standard, one corpus, one shelf, one tool. Every surface names the others, s
 - [MCP Registry entry — io.github.kau17033/cam-product-viability-standard](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.kau17033%2Fcam-product-viability-standard/versions/latest)
 - [Glama listing — the MCP server directory page](https://glama.ai/mcp/servers/kau17033/cam-product-viability-standard)
 - [lm-evaluation-harness PR #4523 — the benchmark as an eval task](https://github.com/EleutherAI/lm-evaluation-harness/pull/4523)
+
+## v2 benchmark contract (2026-11-13)
+
+The 65M-case / zero-violation result belongs to the historical 2026-11-02 contract; it has not been rerun for v2. The 65M corpus and original 9,993-row evaluation data are unchanged. The v2 evaluation task migrates incomplete cases at load time to `status: INCOMPLETE`, `verdict: null`, preserving all complete cases. The new `prepare_dataset.py` can materialize a separate export when needed.

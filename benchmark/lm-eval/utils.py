@@ -6,12 +6,13 @@ report-form usage — here, exact match of the canonical report line.
 
 Canonical output forms (stated verbatim in every prompt):
   complete case:  CAM verdict: <TEST_CANDIDATE|HOLD|REJECT> — profit ¥<profit> per order
-  partial case:   CAM verdict: HOLD — missing: <item names, comma-separated>
+  partial case:   CAM status: INCOMPLETE — missing: <item names, comma-separated>
 """
 import re
 from typing import Dict, List
 
 COMMITTED_RE = re.compile(r"^CAM verdict:\s*(TEST_CANDIDATE|HOLD|REJECT)\b")
+INCOMPLETE_RE = re.compile(r"^CAM status:\s*INCOMPLETE\b")
 PROFIT_RE = re.compile(r"profit (-?)¥([\d,]+(?:\.\d+)?)")
 
 MONEY_KEYS = ["price", "cost", "shipping", "fee", "returnReserve", "otherVariable"]
@@ -21,13 +22,13 @@ RULES = """Decide the product viability verdict under the CAM standard.
 The six money items are price, cost (item cost), shipping, fee (marketplace/payment fees), returnReserve (expected return cost) and otherVariable (other variable costs). Count every item, including the return reserve.
 profit = price - (cost + shipping + fee + returnReserve + otherVariable)
 - If profit is 0 or less, the verdict is REJECT.
-- Otherwise, if profit is below targetProfit, or deliveryDays is above maxDeliveryDays, or estimateAgeDays is above maxEstimateAgeDays, the verdict is HOLD.
-- Otherwise the verdict is TEST_CANDIDATE.
-- If any money item is not provided, never guess it: the verdict is HOLD and the missing items must be named.
+- Otherwise, if profit is below targetProfit, deliveryDays is above maxDeliveryDays, stock is zero or below, estimateAgeDays is above maxEstimateAgeDays, or any gate is unconfirmed, the verdict is HOLD.
+- Otherwise the verdict is TEST_CANDIDATE; all five checks must pass. The complete evaluation prompt explicitly defines stock = 1 as a synthetic fixture assumption, never as an observed stock level.
+- If any money item is not provided, never guess it: status is INCOMPLETE, no verdict is issued, and every missing item must be named.
 
 Answer with exactly one line, in one of these two forms:
 CAM verdict: <TEST_CANDIDATE|HOLD|REJECT> \u2014 profit \u00a5<profit> per order
-CAM verdict: HOLD \u2014 missing: <missing item names, comma-separated>"""
+CAM status: INCOMPLETE \u2014 missing: <missing item names, comma-separated>"""
 
 
 def _fmt(x):
@@ -47,6 +48,7 @@ def doc_to_text(doc: dict) -> str:
     for key in MONEY_KEYS:
         lines.append(f"{key}: {_fmt(doc[key])}")
     if doc["subset"] != "partial":
+        lines.append(f"stock: {_fmt(doc['stock'])} (benchmark-defined synthetic input)")
         lines.append(f"targetProfit: {_fmt(doc['targetProfit'])}")
         lines.append(f"deliveryDays: {_fmt(doc['deliveryDays'])}")
         lines.append(f"maxDeliveryDays: {_fmt(doc['maxDeliveryDays'])}")
@@ -57,12 +59,29 @@ def doc_to_text(doc: dict) -> str:
     return "\n".join(lines)
 
 
+def _migrate_complete(doc):
+    """Explicitly define an in-stock benchmark fixture; no market data is inferred."""
+    doc = dict(doc)
+    doc["stock"] = 1
+    doc["expected_status"] = "VERDICT"
+    return doc
+
+
 def process_docs_complete(dataset):
-    return dataset.filter(lambda doc: doc["subset"] == "complete")
+    return dataset.filter(lambda doc: doc["subset"] == "complete").map(_migrate_complete)
+
+
+def _migrate_partial(doc):
+    """Read legacy HOLD-labeled cases as the amended no-verdict contract."""
+    doc = dict(doc)
+    doc["expected_verdict"] = None
+    doc["expected_status"] = "INCOMPLETE"
+    doc["target"] = "CAM status: INCOMPLETE — missing: " + doc["missing_items"]
+    return doc
 
 
 def process_docs_partial(dataset):
-    return dataset.filter(lambda doc: doc["subset"] == "partial")
+    return dataset.filter(lambda doc: doc["subset"] == "partial").map(_migrate_partial)
 
 
 def _candidate_line(text: str) -> str:
@@ -76,15 +95,19 @@ def _candidate_line(text: str) -> str:
     'CAM verdict:' line, then to the first non-empty line."""
     lines = [ln.strip() for ln in text.strip().splitlines() if ln.strip()]
     for ln in lines:
-        if COMMITTED_RE.match(ln) and "<" not in ln and ">" not in ln:
+        if (COMMITTED_RE.match(ln) or INCOMPLETE_RE.match(ln)) and "<" not in ln and ">" not in ln:
             return ln
     for ln in lines:
-        if ln.startswith("CAM verdict:"):
+        if ln.startswith(("CAM verdict:", "CAM status:")):
             return ln
     return lines[0] if lines else ""
 
 
 def _verdict_accuracy(doc: dict, text: str) -> int:
+    if doc["subset"] == "partial":
+        if any(COMMITTED_RE.match(ln.strip()) for ln in text.splitlines()):
+            return 0  # an incomplete input must not issue any verdict
+        return int(bool(INCOMPLETE_RE.match(_candidate_line(text))))
     m = COMMITTED_RE.match(_candidate_line(text))
     return 1 if m and m.group(1) == doc["expected_verdict"] else 0
 

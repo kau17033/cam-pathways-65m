@@ -32,4 +32,4 @@ generation_kwargs:
 repeats: 1
 num_fewshot: 0
 metadata:
-  version: 1.0
+  version: 2.0

@@ -31,8 +31,8 @@ profit-calculation correctness benchmark for AI systems.
   variable costs) plus criteria (target profit, delivery limit, estimate-age
   limit), output the canonical verdict line.
 - `cam_product_viability_partial`: 1,500 incomplete cases. At least one money
-  item is not provided; the correct behaviour is to refuse to guess — verdict
-  HOLD, with every missing item named.
+  item is not provided; the correct behaviour is to refuse to guess — status
+  INCOMPLETE, without an issued verdict, and every missing item named.
 
 ### Checklist
 
@@ -56,10 +56,9 @@ profit-calculation correctness benchmark for AI systems.
     verdict (TEST_CANDIDATE / HOLD / REJECT) in the standard report form:
     `CAM verdict: <VERDICT> — profit ¥X per order`.
 - [x] Metrics
-  - `verdict_accuracy`: the verdict token on the model's committed
-    `CAM verdict:` line equals the oracle verdict.
+  - `verdict_accuracy`: the committed `CAM verdict:` token matches the oracle for complete cases; for partial cases, `CAM status: INCOMPLETE` is returned without an issued verdict.
   - `line_exact_match`: that line is byte-identical to the canonical report
-    line (for partial cases: `CAM verdict: HOLD — missing: <items>`).
+    line (for partial cases: `CAM status: INCOMPLETE — missing: <items>`).
   - `margin_accuracy` (complete task): the profit figure on the line is
     within 1 JPY of the oracle margin (the reference scorer's tolerance).
   - `missing_named_rate` (partial task): fraction of the missing items the
@@ -85,3 +84,9 @@ profit-calculation correctness benchmark for AI systems.
 
 - v1.0 (2026-11-03): initial release — 9,993 tasks (8,493 complete +
   1,500 partial), validated on lm-evaluation-harness 0.4.13.
+
+- v2.0 (2026-11-13): `process_docs_partial` migrates historical HOLD placeholders in-memory to `INCOMPLETE`, `verdict: null`. Legacy 2026-11-02 data remain byte-identical; run `prepare_dataset.py` for an optional materialized v2 export. The 65M historical verification was not rerun.
+
+### Explicit synthetic stock fixture in v2
+
+The original dense encoding omitted stock. The amended standard does **not** treat absent stock as a passing check. V2 **constructs a distinct synthetic benchmark input with `stock: 1`** for each of the 8,493 retained complete test cases, in both the generated export and the in-memory `process_docs_complete` migration. This value is benchmark-defined test data, not inferred marketplace inventory. Seven historically under-determined zero-stock source cases remain excluded. This transformation does not modify the original 65M synthetic corpus or its verification certificate.
