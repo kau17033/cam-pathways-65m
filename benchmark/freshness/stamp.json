@@ -1,36 +1,36 @@
 {
- "cycle_id": "cyc-20261121-99df3d36",
- "generated_at": "2026-11-21 07:42:39 JST",
+ "cycle_id": "cyc-20261122-980012ee",
+ "generated_at": "2026-11-22 07:42:11 JST",
  "window": {
   "file": "freshness/fresh-window.jsonl",
   "size": 365,
-  "start_index": 3970,
+  "start_index": 4335,
   "of_tasks": 10000
  },
  "layers": {
   "eval": {
    "value": "dense 10000 tasks",
-   "freshness": "STALE (430.0h > TTL 24h)",
+   "freshness": "STALE (454.0h > TTL 24h)",
    "verified_at": "2026-11-03T00:44:00.000Z"
   },
   "training": {
    "value": "QA 1050000 records",
-   "freshness": "STALE (430.0h > TTL 168h)",
+   "freshness": "STALE (454.0h > TTL 168h)",
    "verified_at": "2026-11-03T00:43:00.000Z"
   },
   "corpus": {
    "value": "data chunks 260/260 placed, head b4fe25f3",
-   "freshness": "STALE (408.0h > TTL 24h)",
+   "freshness": "STALE (432.0h > TTL 24h)",
    "verified_at": "2026-11-03T22:43:22.000Z"
   },
   "index": {
-   "value": "head 57911366",
-   "freshness": "STALE (383.9h > TTL 24h)",
+   "value": "head 8041b8c7",
+   "freshness": "STALE (407.9h > TTL 24h)",
    "verified_at": "2026-11-04T22:46:30.000Z"
   },
   "retrieval": {
    "value": "organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST",
-   "freshness": "STALE (437.0h > TTL 24h)",
+   "freshness": "STALE (461.0h > TTL 24h)",
    "verified_at": "2026-11-02T17:42:00.000Z"
   }
  },
@@ -43,7 +43,7 @@
  },
  "github": {
   "repo": "kau17033/cam-pathways-65m",
-  "head": "57911366cb9454ee79bb44461a5c0c7b7e0383a1"
+  "head": "8041b8c7801f61f6ee187ccd924fe1fe18d9db3e"
  },
  "qa_total": 1050000,
  "backcast": {
@@ -56,47 +56,47 @@
  "genres": {
   "appliances": {
    "links": 6,
-   "in_window": 26
+   "in_window": 22
   },
   "baby": {
    "links": 19,
-   "in_window": 26
+   "in_window": 33
   },
   "beauty": {
    "links": 7,
-   "in_window": 38
+   "in_window": 34
   },
   "electronics": {
    "links": 2,
-   "in_window": 41
+   "in_window": 43
   },
   "fashion": {
    "links": 4,
-   "in_window": 27
+   "in_window": 30
   },
   "food": {
    "links": 6,
-   "in_window": 41
+   "in_window": 39
   },
   "home-kitchen": {
    "links": 5,
-   "in_window": 25
+   "in_window": 31
   },
   "pet": {
    "links": 19,
-   "in_window": 34
+   "in_window": 33
   },
   "sports-outdoors": {
    "links": 19,
-   "in_window": 39
+   "in_window": 28
   },
   "stationery-office": {
    "links": 19,
-   "in_window": 39
+   "in_window": 42
   },
   "toys": {
    "links": 8,
-   "in_window": 29
+   "in_window": 30
   },
   "_general": {
    "links": 19,
