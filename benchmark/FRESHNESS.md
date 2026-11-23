@@ -1,6 +1,6 @@
 # Benchmark Freshness — the ruler, kept fresh
 
-Cycle: `cyc-20261123-82fd548d` · Generated: 2026-11-23 07:42:58 JST
+Cycle: `cyc-20261124-a239bcfc` · Generated: 2026-11-24 07:41:59 JST
 
 The benchmark is not a fixed pile. Every cycle it senses the verified state of
 every layer, rotates a fresh window of tasks (deterministic by date — the
@@ -12,11 +12,11 @@ Same cycle id on a surface = the circulation reached it.
 
 | Layer | State | Freshness |
 |---|---|---|
-| 評価（物差し） | dense 10000 tasks | STALE (478.0h > TTL 24h) |
-| 学習（SFT形） | QA 1050000 records | STALE (478.0h > TTL 168h) |
-| コーパス（HF） | data chunks 260/260 placed, head b4fe25f3 | STALE (456.0h > TTL 24h) |
-| 索引（GitHub） | head f7de41dd | STALE (431.9h > TTL 24h) |
-| 取得（実セッション） | organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST | STALE (485.0h > TTL 24h) |
+| 評価（物差し） | dense 10000 tasks | STALE (502.0h > TTL 24h) |
+| 学習（SFT形） | QA 1050000 records | STALE (502.0h > TTL 168h) |
+| コーパス（HF） | data chunks 260/260 placed, head b4fe25f3 | STALE (480.0h > TTL 24h) |
+| 索引（GitHub） | head cda2b1a2 | STALE (455.9h > TTL 24h) |
+| 取得（実セッション） | organic link appearance 0 (baseline 2026-11-03 02:24-02:42 JST); mini measurement due 2026-11-03 10:45 JST | STALE (509.0h > TTL 24h) |
 
 ## Genre spread (horizontal)
 
@@ -24,15 +24,15 @@ Same cycle id on a surface = the circulation reached it.
 |---|---|---|
 | appliances | 6 | 34 |
 | baby | 19 | 36 |
-| beauty | 7 | 40 |
-| electronics | 2 | 26 |
-| fashion | 4 | 25 |
+| beauty | 7 | 36 |
+| electronics | 2 | 38 |
+| fashion | 4 | 36 |
 | food | 6 | 28 |
-| home-kitchen | 5 | 32 |
-| pet | 19 | 42 |
-| sports-outdoors | 19 | 37 |
-| stationery-office | 19 | 28 |
-| toys | 8 | 37 |
+| home-kitchen | 5 | 29 |
+| pet | 19 | 31 |
+| sports-outdoors | 19 | 35 |
+| stationery-office | 19 | 30 |
+| toys | 8 | 32 |
 | _general | 19 | 0 |
 | _counts | 11 | 0 |
 
@@ -46,7 +46,7 @@ Same cycle id on a surface = the circulation reached it.
 Basis: baseline 2026-11-03 02:24-02:42 JST: 3 surfaces x 20 fixed questions, organic; link appearance 0, all markers 0. Full reverse design: `BACKCAST.md`.
 
 ## Today's fresh window
-- File: `freshness/fresh-window.jsonl` (365 tasks, starting at index 4700 of 10000)
+- File: `freshness/fresh-window.jsonl` (365 tasks, starting at index 5065 of 10000)
 - The window is a presentation rotation, not new oracle data. New unseen tasks
   are minted from the deterministic generator when a held-out set is needed.
 
