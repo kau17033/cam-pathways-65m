@@ -8,7 +8,7 @@
     },
     "github": {
         "repo": "kau17033/cam-pathways-65m",
-        "head": "598531a173a2224d7e2990d508ee4c7514816735"
+        "head": "fe0d1734d1c74af2c44b5ff6748c8062874fffbb"
     },
     "layers": {
         "eval": {
@@ -20,11 +20,11 @@
             "ttl_hours": 168
         },
         "corpus": {
-            "verified_at": "2026-11-25T22:42:00.000Z",
+            "verified_at": "2026-11-27T22:42:00Z",
             "ttl_hours": 24
         },
         "index": {
-            "verified_at": "2026-11-25T22:42:00.000Z",
+            "verified_at": "2026-11-27T22:42:00Z",
             "ttl_hours": 24
         },
         "retrieval": {
